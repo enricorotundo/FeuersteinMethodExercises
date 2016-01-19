@@ -1,12 +1,21 @@
-<div ng-controller="ExampleController">
+<div ng-controller="View1Ctrl" >
   <form novalidate class="simple-form">
-    Name: <input type="text" ng-model="user.name" /><br />
-    E-mail: <input type="email" ng-model="user.email" /><br />
-    Gender: <input type="radio" ng-model="user.gender" value="male" />male
+    Age:
+    <input type="text" ng-model="user.age" /><br />
+    Gender: 
+    <input type="radio" ng-model="user.gender" value="male" />male
     <input type="radio" ng-model="user.gender" value="female" />female<br />
-    <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ng-click="update(user)" value="Save" />
+    Known condition:
+    <select ng-model="user.known_condition" convert-to-number>
+      <option value="Condition_1">Condition_1</option>
+      <option value="Condition_2">Condition_2</option>
+      <option value="Condition_3">Condition_3</option>
+    </select>
+
+    <input type="submit" ng-click="start()" value="Start" />
   </form>
-  <pre>user = {{user | json}}</pre>
-  <pre>master = {{master | json}}</pre>
+  <p class="debug">
+    Debug data:
+    <pre class="debug">user = {{user | json}}</pre>
+  </p>
 </div>
