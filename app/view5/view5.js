@@ -131,7 +131,6 @@ angular.module('myApp.view5', ['ngRoute'])
 	// implement the rules fo the "verify" 
 	// step of the inference model
 
-
 	$scope.verify = function(score1, score2, score3) {
 		//Threshold are from ages 8-28, we assume from 28 no more increase is needed. The start threshold is at 0.4
 		$scope.thresholdEx1 = [0.4, 0.43, 0.46, 0.49, 0.52, 0.55, 0.58, 0.61, 0.64, 0.67, 0.70, 0.73, 0.76, 0.79, 0.82, 0.85, 0.87, 0.90, 0.93, 0.96, 1];
@@ -144,13 +143,13 @@ angular.module('myApp.view5', ['ngRoute'])
 			$scope.results['ex1'] = "Present"
 		};
 
-		if (score2 > 0.1) {
+		if (score2 > target_scores_2[$scope.user.inputs.age]) {
 			$scope.results['ex2'] = "Absent"
 		} else{
 			$scope.results['ex2'] = "Present"
 		};
 
-		if (score3 > 0.6) {
+		if (score3 > target_scores_3[$scope.user.inputs.age]) {
 			$scope.results['ex3'] = "Absent"
 		} else{
 			$scope.results['ex3'] = "Present"
