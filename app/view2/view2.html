@@ -1,45 +1,135 @@
 <div ng-controller="View2Ctrl">
 
-<h1>Continue the series</h1>
+    <h1>Continue the series</h1>
+    Target cognitive function: Establish relations
 
-<p>Target cognitive function: Establish relationships</p>
+    <br />
+    <br />
+    <br />
 
-<p>Given the following sequence: </p>
-<p>⬜ △ ◯ ⬜ </p>
-<p>Choose the missing shape at the location of the dots: 
-</p>
-<p>
-1. ⬜ <input type="radio" ng-model="user.ex1.step1" value="1" /><br />
-2. △<input type="radio" ng-model="user.ex1.step1" value="2" /><br />
-3. ◯ <input type="radio" ng-model="user.ex1.step1" value="3" /><br />
-</p>
 
-<p>Given the following sequence: </p>
-<p>◯ △ ⬜ ◯ ... ⬜ </p>
-<p>Choose the missing shape at the location of the dots: 
-</p>
-<p>
-1. ⬜ <input type="radio" ng-model="user.ex1.step2" value="1" /><br />
-2. △<input type="radio" ng-model="user.ex1.step2" value="2" /><br />
-3. ◯ <input type="radio" ng-model="user.ex1.step2" value="3" /><br />
-</p>
+    <p justify="left">Given the following function: ⬜ △ ◯ ⬜ <br/>
+    Choose the first shape to appear on the right if the function is repeated:
+    </p>
+    <table align="center">
+        <tr>
+            <td>⬜</td>
+            <td><input type="radio" ng-model="user.ex1.step1" value="1" /></td>
+        </tr>
 
-<p>Given the following sequence: </p>
-<p>◯ ⬜ △ ◯ ... ⬜</p>
-<p>Choose the missing shape at the location of the dots: 
-</p>
-<p>
-1. ⬜ <input type="radio" ng-model="user.ex1.step3" value="1" /><br />
-2. △<input type="radio" ng-model="user.ex1.step3" value="2" /><br />
-3. ◯ <input type="radio" ng-model="user.ex1.step3" value="3" /><br />
-</p>
+        <tr>
+            <td>△</td>
+            <td><input type="radio" ng-model="user.ex1.step1" value="2" /></td>
+        </tr>
 
-<input type="submit" ng-click="back()" value="Back" />
-<input type="submit" ng-click="next()" value="Next" />
+        <tr>
+            <td>◯</td>
+            <td><input type="radio" ng-model="user.ex1.step1" value="3" /></td>
+        </tr>
+    </table>
+    <br />
+    <br />
 
-<p class="debug">
-    Debug data:
-    <pre class="debug">user = {{user | json}}</pre>
-</p>
+
+    <p>In the following sequence: ◯ △ ⬜ ◯ .. ⬜ <br />
+        Choose the missing shape at the location of the dots.</p>
+    <table align="center">
+        <tr>
+            <td>⬜</td>
+            <td><input type="radio" ng-model="user.ex1.step2" value="1" /></td>
+        </tr>
+
+        <tr>
+            <td>△</td>
+            <td><input type="radio" ng-model="user.ex1.step2" value="2" /></td>
+        </tr>
+
+        <tr>
+            <td>◯</td>
+            <td><input type="radio" ng-model="user.ex1.step2" value="3" /></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+
+    <p>In the following sequence: ◯ ⬜ .. △ ◯ ⬜ ◯ △ <br />
+        Choose the missing shape at the location of the dots.</p>
+    <table align="center">
+        <tr>
+            <td>⬜</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="1" /></td>
+        </tr>
+
+        <tr>
+            <td>△</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="2" /></td>
+        </tr>
+
+        <tr>
+            <td>◯</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="3" /></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+
+
+    <p>In the following sequence: △ △ △ ◯ ⬜ ◯ △ <br />
+        Choose the missing shape at the location of the dots.</p>
+    <table align="center">
+        <tr>
+            <td>⬜</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="1" /></td>
+        </tr>
+
+        <tr>
+            <td>△</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="2" /></td>
+        </tr>
+
+        <tr>
+            <td>◯</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="3" /></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+
+
+
+
+    <p>In the following sequence: ◯ ⬜ .. △ ◯ ⬜ ◯ △ <br />
+        Choose the missing shape at the location of the dots.</p>
+    <table align="center">
+        <tr>
+            <td>⬜</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="1" /></td>
+        </tr>
+
+        <tr>
+            <td>△</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="2" /></td>
+        </tr>
+
+        <tr>
+            <td>◯</td>
+            <td><input type="radio" ng-model="user.ex1.step3" value="3" /></td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+    
+
+    <input type="submit" ng-click="back()" value="Back" />
+    <input type="submit" ng-click="next()" value="Next" />
+
+    <p class="debug">
+        Debug data:
+        <pre class="debug">user = {{user | json}}</pre>
+    </p>
 
 </div>
