@@ -5,12 +5,55 @@
     Gender: 
     <input type="radio" ng-model="user.gender" value="male" />male
     <input type="radio" ng-model="user.gender" value="female" />female<br />
+
+
     Known condition:
     <select ng-model="user.known_condition" convert-to-number>
       <option value="Condition_1">Condition_1</option>
       <option value="Condition_2">Condition_2</option>
-      <option value="Condition_3">Condition_3</option>
+      <option value="Condition_3">Condition_3</option><br />
     </select>
+
+    <br />
+    <br />
+    Select the cognitive functions to be tested:<br />
+    <br />
+    Input: <br />
+    Perception  <input type="checkbox" ng-model="user.hyp1" /><br />
+    Systematic search  <input type="checkbox" ng-model="user.hyp2" /><br />
+    Label  <input type="checkbox" ng-model="user.hyp3" /><br />
+    Use spatial concepts  <input type="checkbox" ng-model="user.hyp4" /><br />
+    Use time concepts  <input type="checkbox" ng-model="user.hyp5" /><br />
+    Ability to conserve concepts  <input type="checkbox" ng-model="user.hyp6" /><br />
+    Precise and accurate data gathering  <input type="checkbox" ng-model="user.hyp7" /><br />
+    Consider two or more sources of information  <input type="checkbox" ng-model="user.hyp8" /><br />
+    <br />
+    Elaboration:<br />
+    Definition of the problem <input type="checkbox" ng-model="user.hyp9" /><br />
+    Select relevant information <input type="checkbox" ng-model="user.hyp10" /><br />
+    Compare <input type="checkbox" ng-model="user.hyp11" /><br />
+    Keep the entire information together/broad <input type="checkbox" ng-model="user.hyp12" /><br />
+    Establish relationships/episodic grasp of reality <input type="checkbox" ng-model="user.hyp13" /><br />
+    Logical evidence <input type="checkbox" ng-model="user.hyp14" /><br />
+    Internalize <input type="checkbox" ng-model="user.hyp15" /><br />
+    Hypothetical thinking <input type="checkbox" ng-model="user.hyp16" /><br />
+    Strategies for hypothesis testing <input type="checkbox" ng-model="user.hyp17" /><br />
+    Elaboration of the cognitive categories <input type="checkbox" ng-model="user.hyp18" /><br />
+    Planning behaviour <input type="checkbox" ng-model="user.hyp19" /><br />
+    Make use of concepts and expand concepts <input type="checkbox" ng-model="user.hyp20" /><br />
+    Summative behavior <input type="checkbox" ng-model="user.hyp21" /><br />
+    <br />
+    Output:<br />
+    Make use of understandable language <input type="checkbox" ng-model="user.hyp22" /><br />
+    Make underlying connections visible <input type="checkbox" ng-model="user.hyp23" /><br />
+    Take enough time to prepare your answer <input type="checkbox" ng-model="user.hyp24" /><br />
+    No trail and error <input type="checkbox" ng-model="user.hyp25" /><br />
+    Make use of the right verbal tools <input type="checkbox" ng-model="user.hyp26" /><br />
+    Be precise <input type="checkbox" ng-model="user.hyp27" /><br />
+    Make the right transport from the elaboration <input type="checkbox" ng-model="user.hyp28" /><br />
+    Think before react <input type="checkbox" ng-model="user.hyp29" /><br />
+
+
 
     <input type="submit" ng-click="start()" value="Start" />
   </form>
@@ -18,4 +61,7 @@
     Debug data:
     <pre class="debug">user = {{user | json}}</pre>
   </p>
+
+
 </div>
+
