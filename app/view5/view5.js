@@ -40,8 +40,8 @@ angular.module('myApp.view5', ['ngRoute'])
 	    "step6": "ABCDEF"
 	  }
 	}
-	$scope.user = user; 
-	// $scope.user = myService.get();
+	// $scope.user = user; 
+	$scope.user = myService.get();
 
 	// ----- NOTE -----
 	// the following analyse functions
