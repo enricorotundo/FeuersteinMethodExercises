@@ -132,19 +132,24 @@ angular.module('myApp.view5', ['ngRoute'])
 	// step of the inference model
 
 	$scope.verify = function(score1, score2, score3) {
-		if (score1 > 0.8) {
+		
+		var target_scores_1 = [] //TODO: add the vectors here
+		var target_scores_2 = []
+		var target_scores_3 = []
+
+		if (score1 > target_scores_1[$scope.user.inputs.age]) {
 			$scope.results['ex1'] = "Absent"
 		} else{
 			$scope.results['ex1'] = "Present"
 		};
 
-		if (score2 > 0.1) {
+		if (score2 > target_scores_2[$scope.user.inputs.age]) {
 			$scope.results['ex2'] = "Absent"
 		} else{
 			$scope.results['ex2'] = "Present"
 		};
 
-		if (score3 > 0.6) {
+		if (score3 > target_scores_3[$scope.user.inputs.age]) {
 			$scope.results['ex3'] = "Absent"
 		} else{
 			$scope.results['ex3'] = "Present"
