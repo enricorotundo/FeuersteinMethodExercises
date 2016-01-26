@@ -32,13 +32,16 @@ angular.module('myApp.view5', ['ngRoute'])
 	    "step3": "987654321"
 	  },
 	  "ex3": {
-	    "step1": "...",
-	    "step2": "...",
-	    "step3": "..."
+	    "step1": "ABCDEF",
+	    "step2": "ABCDEF",
+	    "step3": "ABCDE",
+	    "step4": "ABCDE",
+	    "step5": "ABCDE",
+	    "step6": "ABCDEF"
 	  }
 	}
-	// $scope.user = user; 
-	$scope.user = myService.get();
+	$scope.user = user; 
+	// $scope.user = myService.get();
 
 	// ----- NOTE -----
 	// the following analyse functions
@@ -82,8 +85,36 @@ angular.module('myApp.view5', ['ngRoute'])
 	};
 
 	$scope.analyse_ex3 = function() {
-		
-		
+		var solutions = [
+		"ABCDEF",
+		"ABCDEF",
+		"ABCDEF",
+		"ABCDEF",
+		"ABCDEF",
+		"ABCDEF"
+		]
+		var scores = []
+
+		for (var i = 0; i < solutions.length; i++) { 
+			console.log("index:" + i)
+			console.log("solutions[i]:" + solutions[i])
+			console.log("user solution: " + $scope.user.ex3[String('step'+String(i+1))])
+    		
+    		if (solutions[i] == $scope.user.ex3[String('step'+String(i+1))]) {
+    			scores.push(1/solutions.length)
+    		} else {
+    			scores.push(0)
+    		}
+		}
+
+		console.log("analyse_ex3:" + scores)
+		var sum = scores.reduce(function(pv, cv) { return pv + cv; }, 0);		
+		console.log("sum:" + sum)
+		if (sum > 0.999999) {
+			return 1
+		} else{
+			return sum
+		};
 	};
 	
 	var score_ex1 = $scope.analyse_ex1()	
@@ -92,7 +123,7 @@ angular.module('myApp.view5', ['ngRoute'])
 
 	console.log("Score for ex1: "+score_ex1)
 	console.log("Score for ex2: "+score_ex2)
-	console.log("Score for ex3: "+score_ex2)
+	console.log("Score for ex3: "+score_ex3)
 
 
 	// ----- NOTE -----
@@ -101,22 +132,22 @@ angular.module('myApp.view5', ['ngRoute'])
 	// step of the inference model
 
 	$scope.verify = function(score1, score2, score3) {
-		if (score1 > 0.6) {
-			$scope.results['ex1'] = "Present"
-		} else{
+		if (score1 > 0.8) {
 			$scope.results['ex1'] = "Absent"
+		} else{
+			$scope.results['ex1'] = "Present"
 		};
 
-		if (score2 > 0.6) {
-			$scope.results['ex2'] = "Present"
-		} else{
+		if (score2 > 0.1) {
 			$scope.results['ex2'] = "Absent"
+		} else{
+			$scope.results['ex2'] = "Present"
 		};
 
 		if (score3 > 0.6) {
-			$scope.results['ex3'] = "Present"
-		} else{
 			$scope.results['ex3'] = "Absent"
+		} else{
+			$scope.results['ex3'] = "Present"
 		};
 		
 	};
