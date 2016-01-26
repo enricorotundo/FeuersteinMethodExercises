@@ -7,21 +7,21 @@
     <table align="center">
       <tr align="left">
         <td>Name:</td>
-        <td><input type="text" ng-model="user.name" /></td>
+        <td><input type="text" ng-model="user.inputs.name" /></td>
       </tr>
       <tr>
         <td>Age:</td>
-        <td><input type="text" ng-model="user.age" /></td>
+        <td><input type="text" ng-model="user.inputs.age" /></td>
       </tr>
       <tr>
         <td> Gender: </td>
-        <td align="center">  <input type="radio" ng-model="user.gender" value="male" /> male
-              <input type="radio" ng-model="user.gender" value="female" /> female</td>
+        <td align="center">  <input type="radio" ng-model="user.inputs.gender" value="male" /> male
+              <input type="radio" ng-model="user.inputs.gender" value="female" /> female</td>
       </tr>
     </table>
 
 <!--     Known condition:
-    <select ng-model="user.known_condition" convert-to-number>
+    <select ng-model="user.inputs.known_condition" convert-to-number>
       <option value="Condition_1">Condition_1</option>
       <option value="Condition_2">Condition_2</option>
       <option value="Condition_3">Condition_3</option><br />
@@ -36,35 +36,35 @@
       </tr>
       <tr>
         <td>Perception</td>
-        <td><input type="checkbox" ng-model="user.hyp1" /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp1" /></td>
       </tr>
       <tr>
         <td>Systematic search</td>
-        <td><input type="checkbox" ng-model="user.hyp2" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp2" /><br /></td>
       </tr>
       <tr>
         <td>Label</td>
-        <td><input type="checkbox" ng-model="user.hyp3" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp3" /><br /></td>
       </tr>
       <tr>
         <td>Use spatial concepts</td>
-        <td><input type="checkbox" ng-model="user.hyp4" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp4" /><br /></td>
       </tr>
       <tr>
         <td>Use time concepts</td>
-        <td><input type="checkbox" ng-model="user.hyp5" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp5" /><br /></td>
       </tr>
       <tr>
         <td>Ability to conserve concepts</td>
-        <td><input type="checkbox" ng-model="user.hyp6" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp6" /><br /></td>
       </tr>
       <tr>
         <td>Precise and accurate data gathering</td>
-        <td><input type="checkbox" ng-model="user.hyp7" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp7" /><br /></td>
       </tr>
       <tr>
         <td>Consider two or more sources of information</td>
-        <td><input type="checkbox" ng-model="user.hyp8" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp8" /><br /></td>
       </tr>
 
       <tr>
@@ -72,55 +72,55 @@
       </tr>
       <tr>
         <td>Definition of the problem</td>
-        <td><input type="checkbox" ng-model="user.hyp9" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp9" /><br /></td>
       </tr>
       <tr>
         <td>Select relevant information</td>
-        <td><input type="checkbox" ng-model="user.hyp10" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp10" /><br /></td>
       </tr>
       <tr>
         <td>Compare</td>
-        <td><input type="checkbox" ng-model="user.hyp11" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp11" /><br /></td>
       </tr>
       <tr>
         <td>Keep all the information together/broad mental field</td>
-        <td><input type="checkbox" ng-model="user.hyp12" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp12" /><br /></td>
       </tr>
       <tr>
-        <td>Establish relationships d</td>
-        <td><input type="checkbox" ng-model="user.hyp13" /><br /></td>
+        <td>Establish relations*</td>
+        <td><input type="checkbox" ng-disabled="false" ng-model="user.inputs.hyp13" /><br /></td>
       </tr>
       <tr>
         <td>Logical evidence </td>
-        <td><input type="checkbox" ng-model="user.hyp14" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp14" /><br /></td>
       </tr>
       <tr>
         <td>Internalize</td>
-        <td><input type="checkbox" ng-model="user.hyp15" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp15" /><br /></td>
       </tr>
       <tr>
         <td>Hypothetical thinking</td>
-        <td><input type="checkbox" ng-model="user.hyp16" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp16" /><br /></td>
       </tr>
       <tr>
         <td>Strategies for hypothesis testing</td>
-        <td><input type="checkbox" ng-model="user.hyp17" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp17" /><br /></td>
       </tr>
       <tr>
         <td>Planning behaviour</td>
-        <td><input type="checkbox" ng-model="user.hyp18" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp18" /><br /></td>
       </tr>
       <tr>
         <td>Elaboration of cognitive categories</td>
-        <td><input type="checkbox" ng-model="user.hyp19" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp19" /><br /></td>
       </tr>
       <tr>
         <td>Summative behaviour</td>
-        <td><input type="checkbox" ng-model="user.hyp20" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp20" /><br /></td>
       </tr>
       <tr>
         <td>Episodic grasp of reality</td>
-        <td><input type="checkbox" ng-model="user.hyp21" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp21" /><br /></td>
       </tr>
 
       <tr>
@@ -128,45 +128,47 @@
       </tr>
       <tr>
         <td>Make use of understandable language </td>
-        <td><input type="checkbox" ng-model="user.hyp22" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp22" /><br /></td>
       </tr>
       <tr>
         <td>Make underlying connections visible </td>
-        <td><input type="checkbox" ng-model="user.hyp23" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp23" /><br /></td>
       </tr>
       <tr>
         <td>Take enough time to prepare your answer</td>
-        <td><input type="checkbox" ng-model="user.hyp24" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp24" /><br /></td>
       </tr>
       <tr>
         <td>No trail and error </td>
-        <td><input type="checkbox" ng-model="user.hyp25" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp25" /><br /></td>
       </tr>
       <tr>
         <td>Make use of the right verbal tools</td>
-        <td><input type="checkbox" ng-model="user.hyp26" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp26" /><br /></td>
       </tr>
       <tr>
         <td>Be precise</td>
-        <td><input type="checkbox" ng-model="user.hyp27" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp27" /><br /></td>
       </tr>
       <tr>
         <td>Make the right transport from the elaboration</td>
-        <td><input type="checkbox" ng-model="user.hyp28" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp28" /><br /></td>
       </tr>
       <tr>
         <td>Think before react</td>
-        <td><input type="checkbox" ng-model="user.hyp29" /><br /></td>
+        <td><input type="checkbox" ng-disabled="true" ng-model="user.inputs.hyp29" /><br /></td>
       </tr>
     </table>
     </div>
     <br />
 
+    <p>* related exercise is implemented</p>
+
     <input type="submit" ng-click="start()" value="Start" />
   </form>
   <p class="debug">
     Debug data:
-    <pre class="debug">user = {{user | json}}</pre>
+    <pre class="debug">{{user | json}}</pre>
   </p>
 
 

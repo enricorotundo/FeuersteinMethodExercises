@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.view3',
   'myApp.view4',
+  'myApp.view5',
   'myApp.version'
 ])
 .config(['$routeProvider', function($routeProvider) {
@@ -29,6 +30,11 @@ angular.module('myApp', [
   $routeProvider.when('/view4', {
     templateUrl: 'view4/view4.html',
     controller: 'View4Ctrl'
+  });
+
+  $routeProvider.when('/view5', {
+    templateUrl: 'view5/view5.html',
+    controller: 'View5Ctrl'
   });
 
   $routeProvider.otherwise({redirectTo: '/view1'});
